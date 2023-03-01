@@ -1,6 +1,6 @@
 function App() {
     return (
-        <p>hehehehehehe</p>
+        <p>boobs</p>
     );
 }
 
