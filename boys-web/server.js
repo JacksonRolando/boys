@@ -3,13 +3,13 @@ const express = require('express');
 const cookieparser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
+// Configuring dotenv
+dotenv.config();
+
 const { signup } = require('./lib/auth')
 
 const { mongoose, TraitModel, BoyModel, ListModel } = require('./lib/mongoSetup')
 const { isValidEmail } = require('./src/functions')
-
-// Configuring dotenv
-dotenv.config();
 
 const app = express();
 

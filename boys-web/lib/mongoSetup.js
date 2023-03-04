@@ -4,7 +4,7 @@ mongoose.set('strictQuery', true);
 
 const mongoURL = 'mongodb://127.0.0.1:27017/boys';
 
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURL)
 
 const userSchema = new mongoose.Schema({
     "email": String,
@@ -34,5 +34,10 @@ const listSchema = new mongoose.Schema({
 })
 const ListModel = mongoose.model('List', listSchema);
 
+const refreshTokenSchema = new mongoose.Schema({
+    "token": String,
+    // "expiresWhen": Date
+})
+const RefreshTokenModel = mongoose.model('RefreshToken', refreshTokenSchema)
 
-module.exports = { mongoose, UserModel, TraitModel, BoyModel, ListModel }
+module.exports = { mongoose, UserModel, TraitModel, BoyModel, ListModel, RefreshTokenModel }
